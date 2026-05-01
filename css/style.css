@@ -102,6 +102,20 @@ a:hover { color: var(--accent); }
     letter-spacing: .5px;
 }
 
+/* Mobile navbar brand adjustments */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        white-space: nowrap;
+    }
+    .brand-honey {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+    }
+    .brand-honey i {
+        font-size: 1em;
+    }
+}
+
 /* ---------- Navbar ---------- */
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Poppins', sans-serif;
@@ -965,4 +979,11 @@ a:hover { color: var(--accent); }
     .cd-box span { font-size: 1.5rem; }
     .whatsapp-float { width: 52px; height: 52px; font-size: 26px; }
     .back-to-top { right: 18px; bottom: 84px; }
+}
+
+/* Hide flying bees on mobile devices */
+@media (max-width: 767.98px) {
+    .flying-bees-container {
+        display: none !important;
+    }
 }
