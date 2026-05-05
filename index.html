@@ -62,9 +62,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <a class="text-decoration-none text-body pe-3" href="tel:+256700000000">
-                            <i class="bi bi-telephone me-2"></i>+256 700 000 000
-                        </a>
+                         <a class="text-decoration-none text-body pe-3" href="tel:+256772168003">
+                             <i class="bi bi-telephone me-2"></i>+256 772 168 003
+                         </a>
                         <span class="text-body">|</span>
                         <a class="text-decoration-none text-body px-3" href="mailto:info@guluhoneyfestival.ug">
                             <i class="bi bi-envelope me-2"></i>info@guluhoneyfestival.ug
@@ -79,7 +79,7 @@
                     <a class="text-body px-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="text-body px-2" href="#!"><i class="fab fa-instagram"></i></a>
                     <a class="text-body px-2" href="#!"><i class="fab fa-youtube"></i></a>
-                    <a class="text-body ps-2" href="https://wa.me/256700000000"><i class="fab fa-whatsapp"></i></a>
+                     <a class="text-body ps-2" href="https://wa.me/256780207164"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -510,14 +510,96 @@
 
 
     <!-- =====================  BOOKING (was Appointment)  ===================== -->
-    <div id="booking" class="container-fluid bg-primary my-5 py-5 booking-section">
+    <div id="booking" class="container-fluid py-5 booking-section" style="background: linear-gradient(135deg, #1a0f08 0%, #2c1810 100%);">
         <div class="container py-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="mb-4">
-                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Reserve Your Spot</h5>
-                        <h1 class="display-4 text-dark">Book Your Space at the Festival</h1>
+                        <h5 class="d-inline-block text-warning text-uppercase border-bottom border-5 border-warning">Reserve Your Spot</h5>
+                        <h1 class="display-4 text-white mb-4">Book Your Space at the Festival</h1>
                     </div>
+                    <p class="text-light mb-4 fs-5" style="opacity: 0.9;">
+                        Whether you're an exhibitor, a beekeeper or a partner organisation — secure your space today and
+                        join hundreds of others showcasing the best of honey and bee products in Northern Uganda.
+                    </p>
+                    <ul class="list-unstyled text-light mb-4 fs-5" style="opacity: 0.9;">
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Premium location at Kaunda Ground</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Tables, chairs &amp; branding included</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Live broadcast &amp; media coverage</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning me-2"></i> Free festival access for your team</li>
+                    </ul>
+                    <div class="pt-2">
+                        <a class="btn btn-warning btn-lg rounded-pill py-3 px-5 me-3 shadow-lg" 
+                           href="https://wa.me/256780207164" target="_blank"
+                           style="background: linear-gradient(135deg, #F2A900, #FFC845); color: #1a0f08; border: none; font-weight: 600;">
+                            <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
+                        </a>
+                        <a class="btn btn-outline-light btn-lg rounded-pill py-3 px-5" 
+                           href="#bookingForm" 
+                           style="border-width: 2px; font-weight: 500;">
+                            <i class="fas fa-scroll me-2"></i>Fill Form Below
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="booking-card bg-white rounded-4 shadow-xl p-5 p-lg-5" style="border: 2px solid rgba(242,169,0,0.3);">
+                        <div class="text-center mb-4">
+                            <div class="booking-icon mx-auto mb-3" style="width: 70px; height: 70px; background: linear-gradient(135deg, #F2A900, #FFC845); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-ticket-alt fs-2" style="color: #1a0f08;"></i>
+                            </div>
+                            <h2 class="mb-2" style="color: #1a0f08;">Reserve Your Space</h2>
+                            <p class="text-muted mb-0">Fill out the form below and we'll reach out to confirm your booking</p>
+                        </div>
+                        <form id="bookingForm" onsubmit="return handleBooking(event)">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <input type="text" name="name" required class="form-control form-control-lg bg-light border-0"
+                                        placeholder="Full Name *" style="height: 55px; font-size: 16px; border-radius: 12px;">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="organization" class="form-control form-control-lg bg-light border-0"
+                                        placeholder="Organization / Company (optional)" style="height: 55px; font-size: 16px; border-radius: 12px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="tel" name="phone" required class="form-control form-control-lg bg-light border-0"
+                                        placeholder="Phone Number *" style="height: 55px; font-size: 16px; border-radius: 12px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" name="email" class="form-control form-control-lg bg-light border-0"
+                                        placeholder="Email Address (optional)" style="height: 55px; font-size: 16px; border-radius: 12px;">
+                                </div>
+                                <div class="col-12">
+                                    <select name="category" required class="form-select form-select-lg bg-light border-0"
+                                        style="height: 55px; font-size: 16px; border-radius: 12px; cursor: pointer;">
+                                        <option value="">-- Select Booking Category --</option>
+                                        <option value="Corporate">Corporate Exhibitor</option>
+                                        <option value="Partner">Partner Organization</option>
+                                        <option value="NGO/CBO">NGO / CBO</option>
+                                        <option value="Beekeeper">Beekeeper / Producer</option>
+                                        <option value="Attendee">General Attendee</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control bg-light border-0"
+                                        rows="3" placeholder="Tell us about your space requirements or any special needs..." 
+                                        style="border-radius: 12px; font-size: 16px; resize: vertical;"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn w-100 py-3 fw-bold rounded-pill" type="submit"
+                                        style="background: linear-gradient(135deg, #1a0f08, #3d1c02); color: #F2A900; border: 2px solid #F2A900; font-size: 16px; letter-spacing: 0.5px;">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Booking Request
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-center text-muted mt-3 mb-0 small">
+                                <i class="fas fa-shield-alt me-1"></i> Your information is secure and will only be used to process your booking
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                     <p class="text-dark mb-4 fs-5">
                         Whether you're an exhibitor, a beekeeper or a partner organisation — secure your space today and
                         join hundreds of others showcasing the best of honey and bee products in Northern Uganda.
@@ -527,7 +609,7 @@
                         <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Tables, chairs &amp; branding included</li>
                         <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Live broadcast &amp; media coverage</li>
                     </ul>
-                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="https://wa.me/256700000000">
+                     <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="https://wa.me/256780207164">
                         <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
                     </a>
                 </div>
@@ -915,16 +997,16 @@
                 <div class="col-lg-4">
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-                        <h4>Call Us</h4>
-                        <p class="mb-1"><a href="tel:+256700000000" class="text-dark">+256 700 000 000</a></p>
-                        <p class="mb-0"><a href="tel:+256780000000" class="text-dark">+256 780 000 000</a></p>
+                         <h4>Call Us</h4>
+                         <p class="mb-1"><a href="tel:+256772168003" class="text-dark">+256 772 168 003</a></p>
+                         <p class="mb-0"><a href="tel:+256772168003" class="text-dark">+256 772 168 003</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                         <h4>WhatsApp</h4>
-                        <p class="mb-0"><a href="https://wa.me/256700000000" class="text-dark">Chat with us anytime</a></p>
+                         <p class="mb-0"><a href="tel:+256780207164" class="text-dark">+256 780 207 164</a></p>
                         <small class="text-muted">Quick responses, 8am – 8pm</small>
                     </div>
                 </div>
@@ -961,7 +1043,7 @@
                     <p class="mb-4">Join us on Saturday, 16th May 2025 at Kaunda Ground, Gulu — for a sweet day of culture, beekeeping and community.</p>
                     <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-3"></i>Kaunda Ground, Gulu</p>
                     <p class="mb-2"><i class="fas fa-envelope text-primary me-3"></i>info@guluhoneyfestival.ug</p>
-                    <p class="mb-0"><i class="fas fa-phone-alt text-primary me-3"></i>+256 700 000 000</p>
+                     <p class="mb-0"><i class="fas fa-phone-alt text-primary me-3"></i>+256 772 168 003</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">Quick Links</h4>
@@ -1019,7 +1101,7 @@
 
 
     <!-- =====================  FLOATING ACTIONS  ===================== -->
-    <a href="https://wa.me/256700000000" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+     <a href="https://wa.me/256780207164" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1080,7 +1162,7 @@
                 `Email: ${data.get('email') || '-'}%0A` +
                 `Category: ${data.get('category')}%0A` +
                 `Message: ${data.get('message') || '-'}`;
-            window.open(`https://wa.me/256700000000?text=${msg}`, '_blank');
+            window.open(`https://wa.me/256780207164?text=${msg}`, '_blank');
             return false;
         }
     </script>
